@@ -1,8 +1,46 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	/*
+	We can create methods to make our code more organized and its better practice that way. Earlier we created
+	a mortgage calculator and had all the whole functionality in our main method. We'll create a basic method.
+    */
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Type name: ");
+        sayGreetings(scanner.next());
+//    sayGreetings(name: "David") <-- explicit
+//    Here were explicitly invoking the method sayGreetings with a string object valued David, we can invoke this
+//    as many times as we want and it would be better to use a scanner.
+        System.out.print("Enter first and last name: ");
+        sayGreetings2(scanner.next(), scanner.next());
+//        the amount of inputs must be the same as the number of parameters (arguments)
+
+        System.out.print("What is your name and age?: ");
+        String introduction = sayGreetings3(scanner.next(), scanner.next());
+
     }
+
+    public static void sayGreetings(String name) {
+//        here the method is public static and return type (void is no return type), but we can specify the type
+//        the parameter is the primitive type and argument name. For the public static part, that is more associated
+//        with OOP (object oriented programming)
+        System.out.println("Hello, " + name);
+    }
+
+    public static void sayGreetings2(String firstName, String lastName) {
+//        if we need multiple parameters we can separate it with a comma and use any data type.
+        System.out.println("Hello, " + firstName + " " + lastName);
+//        better way to format strings, concatenating here
+    }
+
+    public static String sayGreetings3(String firstName, String age) {
+        return "Hello my name is " + firstName + "my age is " + age;
+//        this wouldnt work because we are trying using two data types in a method that expects to return ONLY
+//        a string, if we name the parameter age into a string it will work
+    }
+
 }
