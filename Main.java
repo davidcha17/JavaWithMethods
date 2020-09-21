@@ -30,19 +30,29 @@ public class Main {
 //        System.out.println(num2);
 
         String sayHello = "My name is Jeff";
-        System.out.println(sayHello);
+//        System.out.println(sayHello);
 
         sayHello = "My name is not Jeff";
-        System.out.println(sayHello);
+//        System.out.println(sayHello);
 
         String a = "I am an object that cannot be changed";
         String b = new String("a different way to declare a string object");
-        System.out.println(a);
-        System.out.println(b);
+//        System.out.println(a);
+//        System.out.println(b);
 
         Date now = new Date();
-        System.out.println(now);
+//        System.out.println(now);
 
+//        final example
+        final String myName = "David";
+//        myName = "Not David";
+
+//        finally example
+        try{
+            int x = 123;
+        }catch(Exception e){System.out.println(e);}
+        finally{System.out.println("finally block is executed");
+        }
     }
 
     public static void sayGreetings(String name) {
